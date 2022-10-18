@@ -122,17 +122,14 @@ class GFG {
         Console.WriteLine("Linked List before sorting");
         pause = Console.ReadLine();
         list.printList(list.head);
-        
-        
+ 
         watch.Start();    
-        Node N = list.head;
-        while (N.next != null)
-            N = N.next;
- 
-        
- 
-        // Function call
-        list.sort(list.head, N);
+            Node N = list.head;
+            while (N.next != null)
+                N = N.next;
+
+            // Function call
+            list.sort(list.head, N);
         watch.Stop();
         
         Console.WriteLine($"\nExecution Time QuickPush sorting: {watch.ElapsedMilliseconds} ms for {n+11} elements");   
