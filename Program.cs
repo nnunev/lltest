@@ -86,8 +86,8 @@ class GFG {
             sort(pivot_prev.next.next, end);
     }
     public void pop(){
-        head = head.next;
-        //if (list.head.next != null) {list.head=list.head.next;}
+        head = head.next;//if (list.head.next != null) {list.head=list.head.next;}
+        
         Node N = this.head;
             while (N.next != null)
                 N = N.next;
