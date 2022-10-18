@@ -88,6 +88,12 @@ class GFG {
     public void pop(){
         head = head.next;
         //if (list.head.next != null) {list.head=list.head.next;}
+        Node N = this.head;
+            while (N.next != null)
+                N = N.next;
+
+            // Function call
+            this.sort(this.head, N);
     }
     // Driver Code
     public static void Main(String[] args)
@@ -113,7 +119,7 @@ class GFG {
             list.push(3);
             list.push(4);
             list.push(20);
-            list.pop();
+            
         watch.Stop();
  
         Console.WriteLine($"Execution Time QuickPush before sorting: {watch.ElapsedMilliseconds} ms for {n+11} elements");   
@@ -124,12 +130,8 @@ class GFG {
         list.printList(list.head);
  
         watch.Start();    
-            Node N = list.head;
-            while (N.next != null)
-                N = N.next;
-
-            // Function call
-            list.sort(list.head, N);
+            list.pop();
+            
         watch.Stop();
         
         Console.WriteLine($"\nExecution Time QuickPush sorting: {watch.ElapsedMilliseconds} ms for {n+11} elements");   
